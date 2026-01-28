@@ -90,3 +90,4 @@ Ver **`NOTAS-PENDIENTES.md`** para: definición de "Mi diario" (blog vs. diario 
 ## Origen
 
 Contenido y estructura basados en [run4wish.com](https://run4wish.com) (WordPress). Diseño: fondo oscuro, texto claro, botones naranja.
+// deploy test
