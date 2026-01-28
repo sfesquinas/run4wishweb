@@ -1,0 +1,40 @@
+import Link from "next/link";
+import NavDropdown from "./NavDropdown";
+
+const nav = [
+  { href: "/", label: "Inicio" },
+  { href: "/como-funciona", label: "Cómo funciona" },
+  { href: "/carreras", label: "Carreras" },
+  { href: "/clubes", label: "Clubes" },
+  { href: "/wishes", label: "Wishes" },
+  { href: "/mi-diario", label: "Mi diario" },
+  { href: "/empieza-ahora", label: "Empieza ahora" },
+  { href: "/faq", label: "FAQ" },
+];
+
+export default function Header() {
+  return (
+    <header
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "1rem 1.5rem",
+        borderBottom: "1px solid var(--border)",
+        maxWidth: 1200,
+        margin: "0 auto",
+      }}
+    >
+      <Link href="/" aria-label="Run4Wish — Inicio">
+        <img
+          src="/logo.svg"
+          alt="Run4Wish"
+          width={120}
+          height={36}
+          style={{ display: "block", height: 36, width: "auto" }}
+        />
+      </Link>
+      <NavDropdown items={nav} />
+    </header>
+  );
+}

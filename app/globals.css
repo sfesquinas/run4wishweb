@@ -1,0 +1,136 @@
+:root {
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --text: #f0f6fc;
+  --text-muted: #8b949e;
+  --accent: #f97316;
+  --accent-hover: #ea580c;
+  --border: #30363d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.nav-dropdown-link:hover {
+  color: var(--text);
+}
+
+.nav-menu-btn:hover {
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.footer-link:hover {
+  color: var(--text);
+}
+
+.footer-logo:hover {
+  opacity: 0.9;
+}
+
+/* CTAs naranja */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+/* Secciones */
+section {
+  padding: 4rem 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: var(--text);
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin: 1rem 0 0.5rem;
+}
+
+p, li {
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
