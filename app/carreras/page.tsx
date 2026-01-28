@@ -1,16 +1,43 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Carreras — Construye Run4Wish con nosotros | R4W",
   description:
     "Colabora en soporte, producto, marketing, contenido o comunidad. Ganas de construir y orientación a resultados.",
   alternates: { canonical: "/carreras" },
+  openGraph: {
+    title: "Carreras — Construye Run4Wish con nosotros | R4W",
+    description:
+      "Colabora en soporte, producto, marketing, contenido o comunidad. Ganas de construir y orientación a resultados.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Carreras — Construye Run4Wish con nosotros | R4W",
+    description:
+      "Colabora en soporte, producto, marketing, contenido o comunidad. Ganas de construir y orientación a resultados.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function Carreras() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Carreras", item: `${SITE_URL}/carreras` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section style={{ paddingTop: "3rem" }}>
         <h1>Carreras</h1>
         <h2>Construyamos R4W juntos</h2>

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://run4wish.com"),
+  metadataBase: new URL(SITE_URL),
   title: "Run4Wish – R4W",
   description:
     "Plataforma donde conviertes deseos en objetivos claros: crea tu wish, únete a clubes, sigue retos, comparte avances.",
@@ -24,7 +25,8 @@ export const metadata: Metadata = {
       "Plataforma donde conviertes deseos en objetivos claros: crea tu wish, únete a clubes, sigue retos, comparte avances.",
     images: ["/og-image.png"],
   },
-  icons: { icon: "/icon.png" },
+  icons: { icon: "/icon.png", apple: "/icon.png" },
+  themeColor: "#0d1117",
 };
 
 export default function RootLayout({
@@ -36,7 +38,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Run4Wish",
-    url: "https://run4wish.com",
+    url: SITE_URL,
     description:
       "Plataforma donde conviertes deseos en objetivos claros: crea tu wish, únete a clubes, sigue retos, comparte avances.",
     inLanguage: "es",
@@ -46,7 +48,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Run4Wish",
-    url: "https://run4wish.com",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.svg`,
   };
 
   return (

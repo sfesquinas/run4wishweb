@@ -1,16 +1,43 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Empieza ahora — Tu primer wish en 2 minutos | Run4Wish",
   description:
     "Elige tipo de wish, escríbelo, únete a un club y arranca un reto 7/14/30 días. Crear cuenta gratis.",
   alternates: { canonical: "/empieza-ahora" },
+  openGraph: {
+    title: "Empieza ahora — Tu primer wish en 2 minutos | Run4Wish",
+    description:
+      "Elige tipo de wish, escríbelo, únete a un club y arranca un reto 7/14/30 días. Crear cuenta gratis.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Empieza ahora — Tu primer wish en 2 minutos | Run4Wish",
+    description:
+      "Elige tipo de wish, escríbelo, únete a un club y arranca un reto 7/14/30 días. Crear cuenta gratis.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function EmpiezaAhora() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Empieza ahora", item: `${SITE_URL}/empieza-ahora` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section style={{ paddingTop: "3rem" }}>
         <h1>Empieza ahora</h1>
         <h2>Tu primer wish en menos de 2 minutos</h2>

@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
 type Item = { href: string; label: string };
 
 export default function NavDropdown({ items }: { items: Item[] }) {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -44,6 +46,7 @@ export default function NavDropdown({ items }: { items: Item[] }) {
       {open && (
         <div
           role="menu"
+          className="nav-dropdown-menu"
           style={{
             position: "absolute",
             top: "100%",
@@ -65,6 +68,7 @@ export default function NavDropdown({ items }: { items: Item[] }) {
               role="menuitem"
               onClick={() => setOpen(false)}
               className="nav-dropdown-link"
+              aria-current={pathname === href ? "page" : undefined}
               style={{
                 display: "block",
                 padding: "0.5rem 1rem",

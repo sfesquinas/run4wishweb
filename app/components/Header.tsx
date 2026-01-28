@@ -19,13 +19,14 @@ export default function Header() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "1rem 1.5rem",
+        padding: "1rem 2.5rem",
         borderBottom: "1px solid var(--border)",
         maxWidth: 1200,
         margin: "0 auto",
+        width: "100%",
       }}
     >
-      <Link href="/" aria-label="Run4Wish — Inicio">
+      <Link href="/" className="header-logo" aria-label="Run4Wish — Inicio">
         <img
           src="/logo.svg"
           alt="Run4Wish"

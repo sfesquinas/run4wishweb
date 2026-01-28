@@ -1,11 +1,25 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Preguntas frecuentes — Run4Wish | R4W",
   description:
     "Qué es un wish, clubes, retos, cómo empezar. Respuestas rápidas a las dudas más comunes.",
   alternates: { canonical: "/faq" },
+  openGraph: {
+    title: "Preguntas frecuentes — Run4Wish | R4W",
+    description:
+      "Qué es un wish, clubes, retos, cómo empezar. Respuestas rápidas a las dudas más comunes.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Preguntas frecuentes — Run4Wish | R4W",
+    description:
+      "Qué es un wish, clubes, retos, cómo empezar. Respuestas rápidas a las dudas más comunes.",
+    images: ["/og-image.png"],
+  },
 };
 
 const faq = [
@@ -50,11 +64,24 @@ export default function FAQ() {
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "FAQ", item: `${SITE_URL}/faq` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <section style={{ paddingTop: "3rem" }}>
         <h1>FAQ – Preguntas frecuentes</h1>
@@ -62,7 +89,7 @@ export default function FAQ() {
 
       {faq.map(({ q, a }) => (
         <section key={q}>
-          <h2>{q}</h2>
+          <h3>{q}</h3>
           <p>{a}</p>
         </section>
       ))}

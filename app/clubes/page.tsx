@@ -1,16 +1,43 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Clubes Run4Wish — Comunidades por objetivo | R4W",
   description:
     "Avanza acompañado: Finanzas, Idiomas, Creatividad, Emprender, Hábitos. Motivación, ideas y accountability.",
   alternates: { canonical: "/clubes" },
+  openGraph: {
+    title: "Clubes Run4Wish — Comunidades por objetivo | R4W",
+    description:
+      "Avanza acompañado: Finanzas, Idiomas, Creatividad, Emprender, Hábitos. Motivación, ideas y accountability.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clubes Run4Wish — Comunidades por objetivo | R4W",
+    description:
+      "Avanza acompañado: Finanzas, Idiomas, Creatividad, Emprender, Hábitos. Motivación, ideas y accountability.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function Clubes() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Clubes", item: `${SITE_URL}/clubes` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section style={{ paddingTop: "3rem" }}>
         <h1>Clubes</h1>
         <h2>No avanzas solo/a. Avanzas mejor acompañado/a.</h2>

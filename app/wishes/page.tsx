@@ -1,16 +1,43 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Wishes — Tu deseo con estructura | Run4Wish",
   description:
     "Crea wishes, prioriza, divide en mini-objetivos y mide progreso. Plantilla para tu primer wish.",
   alternates: { canonical: "/wishes" },
+  openGraph: {
+    title: "Wishes — Tu deseo con estructura | Run4Wish",
+    description:
+      "Crea wishes, prioriza, divide en mini-objetivos y mide progreso. Plantilla para tu primer wish.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wishes — Tu deseo con estructura | Run4Wish",
+    description:
+      "Crea wishes, prioriza, divide en mini-objetivos y mide progreso. Plantilla para tu primer wish.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function Wishes() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Wishes", item: `${SITE_URL}/wishes` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section style={{ paddingTop: "3rem" }}>
         <h1>WISHES</h1>
         <h2>Tu deseo, con estructura</h2>

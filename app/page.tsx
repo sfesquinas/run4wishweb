@@ -6,22 +6,34 @@ export const metadata: Metadata = {
   description:
     "Reto diario de 1 pregunta. Gana quien no falla ningún día. Crea tu wish, únete a clubes, sigue retos. Empieza gratis.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Run4Wish — Convierte la constancia en deseos cumplidos | R4W",
+    description:
+      "Reto diario de 1 pregunta. Gana quien no falla ningún día. Crea tu wish, únete a clubes, sigue retos. Empieza gratis.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Run4Wish — Convierte la constancia en deseos cumplidos | R4W",
+    description:
+      "Reto diario de 1 pregunta. Gana quien no falla ningún día. Crea tu wish, únete a clubes, sigue retos. Empieza gratis.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section style={{ paddingTop: "5rem", paddingBottom: "4rem" }}>
-        <h1>Run4Wish — Convierte la constancia en deseos cumplidos</h1>
+      <section className="home-section" style={{ paddingTop: "5rem", paddingBottom: "2.5rem" }}>
+        <h1>La vida es un reto diario. Run4Wish te entrena para ganarla.</h1>
         <p style={{ marginBottom: "1.5rem", maxWidth: "540px" }}>
-          Run4Wish es un reto diario donde avanzas en una carrera respondiendo
-          una sola pregunta al día. No gana el más listo. Gana quien no falla
-          ningún día. La constancia te acerca a tu deseo.
+          Da igual dónde naciste. Si tienes un deseo y eres constante, lo
+          lograrás.
         </p>
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
           <Link href="/empieza-ahora" className="btn-primary">
-            Quiero CUMPLIR mi deseo
+            Empieza ahora
           </Link>
           <Link href="/como-funciona" className="btn-primary">
             Cómo funciona
@@ -29,53 +41,91 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cómo funciona (3 pasos) */}
-      <section>
-        <h2>¿Cómo funciona Run4Wish?</h2>
-        <h3>Te registras gratis</h3>
-        <p>Entras en la carrera junto a otros runners reales y simulados.</p>
-        <h3>Respondes 1 pregunta al día</h3>
-        <p>Solo 20 segundos. Si aciertas, adelantas. Si fallas, te quedas atrás.</p>
-        <h3>La constancia te acerca al deseo</h3>
-        <p>No es suerte. Es no romper la cadena diaria.</p>
+      {/* Así es R4W */}
+      <section className="home-section">
+        <h2>Así es Run4Wish</h2>
+        <p style={{ marginBottom: "2rem" }}>
+          La vida tiene retos, preparación, gente, aspiraciones y economía. R4W
+          los traduce en sistema.
+        </p>
+        <dl style={{ display: "grid", gap: "1.25rem" }}>
+          <div>
+            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
+              Pregunta diaria
+            </dt>
+            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
+              La vida es un reto cada día. En R4W: una pregunta, 20 segundos.
+              Sin excusas.
+            </dd>
+          </div>
+          <div>
+            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
+              Training
+            </dt>
+            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
+              Estudiamos, trabajamos, entrenamos. En R4W: contenido y práctica
+              para mejorar.
+            </dd>
+          </div>
+          <div>
+            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
+              Tribu
+            </dt>
+            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
+              Creamos relaciones con nuestra gente. En R4W: clubes donde avanzas
+              acompañado.
+            </dd>
+          </div>
+          <div>
+            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
+              Carreras
+            </dt>
+            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
+              Aspiraciones, deseos, objetivos. En R4W: retos con premios reales.
+            </dd>
+          </div>
+          <div>
+            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
+              Wishes
+            </dt>
+            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
+              Hace falta una economía. En R4W: deseos y recompensas que impulsan.
+            </dd>
+          </div>
+        </dl>
       </section>
 
-      <section>
-        <h2>Esto no es un juego. Es un hábito disfrazado de carrera.</h2>
-        <p>
-          Run4Wish entrena foco, disciplina y capacidad de cumplir. Aparecer
-          cada día es el hábito más poderoso.
+      {/* Declaración */}
+      <section className="home-section">
+        <h2>Nuestra declaración</h2>
+        <p style={{ marginBottom: "1rem" }}>
+          R4W nace para demostrar que la condición socioeconómica no define tu
+          destino. Si tienes un deseo y lo persigues con constancia, lo puedes
+          lograr.
+        </p>
+        <p style={{ marginBottom: 0 }}>
+          Por eso creamos <strong>carreras especiales</strong>: cualquiera puede
+          enviarnos su deseo; lo valoramos y, si podemos hacerlo posible, lo
+          convertimos en el premio final de una carrera.
+        </p>
+        <p style={{ marginTop: "1rem" }}>
+          <Link href="/carreras">Ver carreras y cómo colaborar</Link>
         </p>
       </section>
 
-      <section>
-        <h2>¿Por qué engancha tanto?</h2>
-        <p>Avance real. Compites. No quieres romper tu racha. Tu deseo se acerca.</p>
+      {/* Cómo empezar */}
+      <section className="home-section">
+        <h2>Cómo empezar</h2>
+        <ol style={{ marginLeft: "1.25rem", marginBottom: "1.5rem" }}>
+          <li style={{ marginBottom: "0.5rem" }}>Regístrate gratis.</li>
+          <li style={{ marginBottom: "0.5rem" }}>Responde 1 pregunta al día.</li>
+          <li style={{ marginBottom: "0.5rem" }}>
+            Entrena, únete a tu tribu, participa en carreras.
+          </li>
+          <li>Cumple tu wish.</li>
+        </ol>
         <Link href="/empieza-ahora" className="btn-primary">
-          Quiero empezar hoy
-        </Link>
-      </section>
-
-      <section>
-        <h2>Para quién es Run4Wish</h2>
-        <p>
-          Para cualquier persona mayor de edad con un deseo y ganas de
-          demostrarse que puede conseguirlo con constancia. Solo compromiso.
-        </p>
-        <Link href="/carreras" className="btn-primary">
-          Ver las carreras disponibles
-        </Link>
-      </section>
-
-      <section>
-        <h2>La mayoría abandona sus metas. Aquí no puedes.</h2>
-        <p>Cada día cuenta. Cada día suma. Cada día te acerca.</p>
-      </section>
-
-      <section>
-        <h2>Empieza hoy tu carrera</h2>
-        <Link href="/empieza-ahora" className="btn-primary">
-          Crear mi cuenta gratis
+          Empieza tu carrera
         </Link>
         <p style={{ marginTop: "1rem" }}>
           <Link href="/como-funciona">Quiero saber más</Link>

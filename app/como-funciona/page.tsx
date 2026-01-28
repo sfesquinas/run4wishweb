@@ -1,16 +1,43 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Cómo funciona Run4Wish — 5 pasos para cumplir tu wish | R4W",
   description:
     "Wish → mini-objetivos → Club → Retos → Revisar. Estructura, comunidad y constancia para lograr tus metas.",
   alternates: { canonical: "/como-funciona" },
+  openGraph: {
+    title: "Cómo funciona Run4Wish — 5 pasos para cumplir tu wish | R4W",
+    description:
+      "Wish → mini-objetivos → Club → Retos → Revisar. Estructura, comunidad y constancia para lograr tus metas.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cómo funciona Run4Wish — 5 pasos para cumplir tu wish | R4W",
+    description:
+      "Wish → mini-objetivos → Club → Retos → Revisar. Estructura, comunidad y constancia para lograr tus metas.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function ComoFunciona() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Cómo funciona", item: `${SITE_URL}/como-funciona` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section style={{ paddingTop: "3rem" }}>
         <h1>Cómo funciona R4W</h1>
         <h2>De &quot;quiero hacerlo&quot; a &quot;lo estoy logrando&quot;</h2>
