@@ -270,6 +270,7 @@ section {
   .home-hero h1 { font-size: 2.25rem; }
   .home-declaracion-title { font-size: 1.5rem; }
   .como-funciona-hero h1 { font-size: 2.25rem; }
+  .clubes-hero h1 { font-size: 2.25rem; }
 }
 
 /* Cómo funciona — hero */
@@ -320,6 +321,139 @@ section {
 .como-funciona-hero-hr {
   margin-top: 1.5rem;
   margin-bottom: 0;
+}
+
+/* Clubes / Mi Tribu — hero */
+.clubes-hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.clubes-hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  display: block;
+}
+
+.clubes-hero-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.clubes-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.clubes-hero-tagline {
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+}
+
+.clubes-hero-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 42ch;
+  line-height: 1.55;
+}
+
+.clubes-hero-hr {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.clubes-section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.clubes-section h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.clubes-section p {
+  margin-bottom: 0.5rem;
+}
+
+.clubes-section p:last-child {
+  margin-bottom: 0;
+}
+
+.clubes-section ul {
+  margin-bottom: 0.75rem;
+}
+
+.clubes-cta-wrap {
+  padding-bottom: 2.5rem;
+}
+
+.clubes-cta-wrap h2 + p {
+  margin-bottom: 1rem;
+}
+
+.clubes-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.clubes-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.clubes-card:hover {
+  border-color: var(--text-muted);
+  background: rgba(21, 28, 39, 0.85);
+}
+
+.clubes-card-icon {
+  flex-shrink: 0;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clubes-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.clubes-cards-summary {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.55;
+  max-width: 52ch;
+  margin: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .clubes-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
 }
 
 /* Cómo funciona — pasos (tarjetas) */

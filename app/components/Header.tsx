@@ -6,7 +6,7 @@ const nav = [
   { href: "/", label: "Inicio" },
   { href: "/como-funciona", label: "Cómo funciona" },
   //{ href: "/carreras", label: "Carreras" }, // oculto de momento
-  { href: "/clubes", label: "Clubes" },
+  { href: "/clubes", label: "Mi Tribu" },
   { href: "/wishes", label: "Wishes" },
   { href: "/empieza-ahora", label: "Empieza ahora" },
   { href: "/mi-diario", label: "Mi diario" },
