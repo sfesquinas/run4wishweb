@@ -8,8 +8,8 @@ const nav = [
   //{ href: "/carreras", label: "Carreras" }, // oculto de momento
   { href: "/clubes", label: "Clubes" },
   { href: "/wishes", label: "Wishes" },
-  { href: "/mi-diario", label: "Mi diario" },
   { href: "/empieza-ahora", label: "Empieza ahora" },
+  { href: "/mi-diario", label: "Mi diario" },
   { href: "/faq", label: "FAQ" },
 ];
 
