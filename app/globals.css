@@ -269,6 +269,155 @@ section {
 @media (min-width: 640px) {
   .home-hero h1 { font-size: 2.25rem; }
   .home-declaracion-title { font-size: 1.5rem; }
+  .como-funciona-hero h1 { font-size: 2.25rem; }
+}
+
+/* Cómo funciona — hero */
+.como-funciona-hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.como-funciona-hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  display: block;
+}
+
+.como-funciona-hero-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.como-funciona-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.como-funciona-hero-tagline {
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+}
+
+.como-funciona-hero-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 42ch;
+  line-height: 1.55;
+}
+
+.como-funciona-hero-hr {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Cómo funciona — pasos (tarjetas) */
+.como-funciona-steps-wrap {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.como-funciona-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.como-funciona-step {
+  padding: 1.75rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.como-funciona-step:hover {
+  border-color: var(--text-muted);
+  background: rgba(21, 28, 39, 0.85);
+}
+
+.como-funciona-step h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.como-funciona-step-num {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.9;
+  margin-right: 0.5rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.como-funciona-step p {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.como-funciona-step p:last-of-type {
+  margin-bottom: 0;
+}
+
+.como-funciona-step ul {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.como-funciona-step-cta {
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+.como-funciona-step-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.como-funciona-step-link:hover {
+  color: var(--accent-hover);
+}
+
+.como-funciona-cta-wrap {
+  padding-top: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+.como-funciona-cta-wrap h2 {
+  margin: 0 0 0.5rem;
+}
+
+.como-funciona-cta-wrap p {
+  margin: 0 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .como-funciona-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 h1 {

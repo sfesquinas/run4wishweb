@@ -1,23 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Cómo funciona Run4Wish — 5 pasos para cumplir tu wish | R4W",
+  title: "Cómo funciona Run4Wish — 6 pasos para cumplir tu wish | R4W",
   description:
-    "Wish → mini-objetivos → Club → Retos → Revisar. Estructura, comunidad y constancia para lograr tus metas.",
+    "Wish → mini-objetivos → Club → Retos → Revisar → Mi Diario. Estructura, comunidad y constancia para lograr tus metas.",
   alternates: { canonical: "/como-funciona" },
   openGraph: {
-    title: "Cómo funciona Run4Wish — 5 pasos para cumplir tu wish | R4W",
+    title: "Cómo funciona Run4Wish — 6 pasos para cumplir tu wish | R4W",
     description:
-      "Wish → mini-objetivos → Club → Retos → Revisar. Estructura, comunidad y constancia para lograr tus metas.",
+      "Wish → mini-objetivos → Club → Retos → Revisar → Mi Diario. Estructura, comunidad y constancia para lograr tus metas.",
     images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cómo funciona Run4Wish — 5 pasos para cumplir tu wish | R4W",
+    title: "Cómo funciona Run4Wish — 6 pasos para cumplir tu wish | R4W",
     description:
-      "Wish → mini-objetivos → Club → Retos → Revisar. Estructura, comunidad y constancia para lograr tus metas.",
+      "Wish → mini-objetivos → Club → Retos → Revisar → Mi Diario. Estructura, comunidad y constancia para lograr tus metas.",
     images: ["/og/run4wish.jpg"],
   },
 };
@@ -38,54 +39,80 @@ export default function ComoFunciona() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <section style={{ paddingTop: "3rem" }}>
-        <h1>Cómo funciona R4W</h1>
-        <h2>De &quot;quiero hacerlo&quot; a &quot;lo estoy logrando&quot;</h2>
-        <p>
+      <section className="como-funciona-hero" aria-labelledby="como-funciona-heading">
+        <Image
+          src="/img/como-funciona.png"
+          alt="Cómo funciona Run4Wish — De tu deseo a tu logro"
+          width={1200}
+          height={630}
+          priority={true}
+          className="como-funciona-hero-img"
+        />
+        <p className="como-funciona-hero-label">Tu camino</p>
+        <h1 id="como-funciona-heading">
+          Cómo funciona Run<span className="brand-4">4</span>Wish
+        </h1>
+        <p className="como-funciona-hero-tagline">
+          De &quot;quiero hacerlo&quot; a &quot;lo estoy logrando&quot;
+        </p>
+        <p className="como-funciona-hero-text">
           R4W convierte un deseo en un sistema fácil de seguir. No es magia: es
           estructura + comunidad + constancia.
         </p>
-        <hr />
+        <hr className="como-funciona-hero-hr" />
       </section>
 
-      <section>
-        <h2>Paso 1: Crea tu Wish</h2>
-        <p>Escribe tu deseo con claridad:</p>
-        <ul>
-          <li>¿Qué cambiaría si lo consigues?</li>
-          <li>¿Por qué lo quieres?</li>
-          <li>¿Qué quieres lograr?</li>
-        </ul>
-        <p><strong>Ejemplos:</strong> Aprender inglés, ahorrar 1.000€ en 90 días, entrenar 3 veces/semana, lanzar mi marca en 60 días.</p>
+      <section className="como-funciona-steps-wrap" aria-label="Los 6 pasos">
+        <div className="como-funciona-steps">
+          <article className="como-funciona-step">
+            <h2><span className="como-funciona-step-num">01</span> Regístrate</h2>
+            <p>No olvides validar tu mail: si no, Wisho no te dejará entrar. Así protegemos tus datos.</p>
+          </article>
+
+          <article className="como-funciona-step">
+            <h2><span className="como-funciona-step-num">02</span> Entra, piensa tu deseo y lánzalo</h2>
+            <p>Por ejemplo: viajar, comprar…</p>
+          </article>
+
+          <article className="como-funciona-step">
+            <h2><span className="como-funciona-step-num">03</span> Responde a la pregunta del día</h2>
+            <p>Para avanzar. Atento a los retos que van a ir subiendo.</p>
+          </article>
+
+          <article className="como-funciona-step">
+            <h2><span className="como-funciona-step-num">04</span> Entrena</h2>
+            <p>Entrena cada día.</p>
+          </article>
+
+          <article className="como-funciona-step">
+            <h2><span className="como-funciona-step-num">05</span> Crea un club con tu tribu o únete al que más te guste</h2>
+            <p>Chatea, pide ayuda… Aquí no estás solo.</p>
+          </article>
+
+          <article className="como-funciona-step">
+            <h2><span className="como-funciona-step-num">06</span> Entra en la web cada día</h2>
+            <p>Estará esperándote un consejo, una propuesta, un reto…</p>
+            <p className="como-funciona-step-cta">
+              <Link href="/mi-diario" className="como-funciona-step-link">
+                Ir a Mi Diario
+              </Link>
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section>
-        <h2>Paso 2: Convierte el wish en mini-objetivos</h2>
-        <p>Pasos pequeños: realistas, medibles, simples.</p>
-        <p>Ejemplo: Wish &quot;Lanzar mi marca&quot; → nombre, propuesta, contenido, landing, primer producto, lanzamiento.</p>
-      </section>
-
-      <section>
-        <h2>Paso 3: Únete a un Club</h2>
-        <p>Comunidad con el mismo tipo de objetivo: responsabilidad, motivación, ideas, apoyo.</p>
-      </section>
-
-      <section>
-        <h2>Paso 4: Participa en Retos</h2>
-        <p>Sprints 7/14/30 días. Progreso real, hitos, mini-tareas diarias.</p>
-      </section>
-
-      <section>
-        <h2>Paso 5: Revisa y mejora</h2>
-        <p>Si te bloqueas, la comunidad ayuda. Si vas rápido, subes nivel. Si te pasaste, simplificas.</p>
-      </section>
-
-      <section>
-        <h2>¿Listo/a?</h2>
-        <p>Empieza con un wish pequeño. Lo importante es arrancar.</p>
-        <Link href="/empieza-ahora" className="btn-primary">
-          Empieza ahora
-        </Link>
+      <section className="como-funciona-cta-wrap">
+        <h2>El primer paso empieza aquí</h2>
+        <p>No hace falta hacerlo perfecto. Hace falta empezar.</p>
+        <a
+          href="https://run4wish.vercel.app/register"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+          aria-label="Empezar mi camino — Ir al registro"
+        >
+          Empezar mi camino
+        </a>
       </section>
     </>
   );

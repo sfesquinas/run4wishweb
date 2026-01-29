@@ -90,7 +90,7 @@ export default function Home() {
             Nuestra declaración
           </h2>
           <p className="home-declaracion-lead">
-            R<span className="brand-4">4</span>W nace para demostrar que la condición socioeconómica no define tu
+            R4W nace para demostrar que la condición socioeconómica no define tu
             destino. Si tienes un deseo y lo persigues con constancia, lo puedes
             lograr.
           </p>
