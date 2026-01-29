@@ -226,6 +226,24 @@ button:focus-visible {
   flex-shrink: 0;
   align-self: stretch;
   background: var(--bg);
+  padding: 1.25rem 2.5rem;
+  box-shadow: none;
+  transition: padding 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+.header-sticky.header--scrolled {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.header-logo-img {
+  transition: transform 0.25s ease-out;
+}
+
+.header-sticky.header--scrolled .header-logo-img {
+  transform: scale(0.92);
+  transform-origin: left center;
 }
 
 /* CTAs naranja */
