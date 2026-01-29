@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
+import FooterLogoMenu from "./FooterLogoMenu";
 
 export default function Footer() {
   return (
@@ -11,47 +10,18 @@ export default function Footer() {
       }}
     >
       <div
+        className="footer-inner"
         style={{
           maxWidth: 720,
           margin: "0 auto",
           display: "flex",
-          flexWrap: "wrap",
           alignItems: "center",
-          gap: "1rem",
           justifyContent: "space-between",
+          paddingLeft: "1.5rem",
+          paddingRight: "1.5rem",
         }}
       >
-        <Link href="/" className="footer-logo" aria-label="Run4Wish — Inicio">
-          <Image
-            src="/logo.svg"
-            alt="Run4Wish"
-            width={100}
-            height={30}
-            style={{ display: "block", height: 30, width: "auto" }}
-          />
-        </Link>
-        <nav aria-label="Enlaces del footer" style={{ display: "flex", gap: "1rem" }}>
-          <Link href="/" className="footer-link" style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
-            Inicio
-          </Link>
-          <Link
-            href="/como-funciona"
-            className="footer-link"
-            style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}
-          >
-            Cómo funciona
-          </Link>
-          <Link
-            href="/empieza-ahora"
-            className="footer-link"
-            style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}
-          >
-            Empieza ahora
-          </Link>
-          <Link href="/faq" className="footer-link" style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
-            FAQ
-          </Link>
-        </nav>
+        <FooterLogoMenu />
         <a
           href="https://www.instagram.com/run4wish/?hl=es"
           target="_blank"

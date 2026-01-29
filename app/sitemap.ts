@@ -11,5 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/mi-diario` },
     { url: `${SITE_URL}/empieza-ahora` },
     { url: `${SITE_URL}/faq` },
+    { url: `${SITE_URL}/aviso-legal` },
+    { url: `${SITE_URL}/politica-privacidad` },
+    { url: `${SITE_URL}/politica-cookies` },
   ];
 }
