@@ -888,7 +888,18 @@ hr {
 .empieza-section hr { margin: 1.25rem 0; }
 .empieza-section ul { margin-bottom: 0.5rem; }
 
-.empieza-hero { padding-top: 2.5rem; }
+.empieza-hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.empieza-hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  display: block;
+}
 
 .empieza-hero-label {
   font-size: 0.8rem;
@@ -906,19 +917,20 @@ hr {
   margin-bottom: 0.35rem;
 }
 
-.empieza-hero h2 {
-  font-size: 1.25rem;
+.empieza-hero-tagline {
+  font-size: 1.1rem;
+  color: var(--text);
   font-weight: 500;
-  color: var(--text-muted);
-  margin-top: 0.25rem;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.5rem;
+  max-width: 42ch;
 }
 
-.empieza-hero-tagline {
-  font-size: 1rem;
+.empieza-hero-text {
+  font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 0;
-  max-width: 32ch;
+  margin: 0;
+  max-width: 42ch;
+  line-height: 1.55;
 }
 
 .empieza-hero-hr {

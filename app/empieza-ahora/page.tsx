@@ -40,10 +40,18 @@ export default function EmpiezaAhora() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <section className="empieza-section empieza-hero" aria-labelledby="empieza-heading">
+        <Image
+          src="/img/hero-empieza-ahora.jpg"
+          alt="Empieza ahora — Pide tu primer deseo en menos de 2 minutos"
+          width={1200}
+          height={630}
+          priority={true}
+          className="empieza-hero-img"
+        />
         <p className="empieza-hero-label">Tu primer paso</p>
         <h1 id="empieza-heading">Empieza ahora</h1>
-        <h2>Pide tu primer deseo en menos de 2 minutos</h2>
-        <p className="empieza-hero-tagline">No necesitas perfección. Solo el primer paso.</p>
+        <p className="empieza-hero-tagline">Pide tu primer deseo en menos de 2 minutos.</p>
+        <p className="empieza-hero-text">No necesitas perfección. Solo el primer paso.</p>
         <hr className="empieza-hero-hr" />
       </section>
 
