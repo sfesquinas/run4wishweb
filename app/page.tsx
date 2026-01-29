@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import FeatureGrid from "./components/FeatureGrid";
 
 const title = "Run4Wish | Convierte la constancia en deseos cumplidos";
 const description =
@@ -70,51 +71,7 @@ export default function Home() {
           La vida tiene retos, preparación, gente, aspiraciones y economía. R4W
           los traduce en sistema.
         </p>
-        <dl style={{ display: "grid", gap: "1.25rem" }}>
-          <div>
-            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
-              Pregunta diaria
-            </dt>
-            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
-              La vida es un reto cada día. En R4W: una pregunta, 20 segundos.
-              Sin excusas.
-            </dd>
-          </div>
-          <div>
-            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
-              Training
-            </dt>
-            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
-              Estudiamos, trabajamos, entrenamos. En R4W: contenido y práctica
-              para mejorar.
-            </dd>
-          </div>
-          <div>
-            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
-              Tribu
-            </dt>
-            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
-              Creamos relaciones con nuestra gente. En R4W: clubes donde avanzas
-              acompañado.
-            </dd>
-          </div>
-          <div>
-            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
-              Carreras
-            </dt>
-            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
-              Aspiraciones, deseos, objetivos. En R4W: retos con premios reales.
-            </dd>
-          </div>
-          <div>
-            <dt style={{ fontWeight: 600, color: "var(--text)", marginBottom: "0.25rem" }}>
-              Wishes
-            </dt>
-            <dd style={{ margin: 0, color: "var(--text-muted)" }}>
-              Hace falta una economía. En R4W: deseos y recompensas que impulsan.
-            </dd>
-          </div>
-        </dl>
+        <FeatureGrid />
       </section>
 
       {/* Declaración */}
