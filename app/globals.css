@@ -100,8 +100,27 @@ button:focus-visible {
   opacity: 0.9;
 }
 
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer-icon:hover {
+  color: var(--accent);
+}
+
 .header-logo:hover {
   opacity: 0.9;
+}
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg);
 }
 
 /* CTAs naranja */
