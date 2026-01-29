@@ -271,6 +271,7 @@ section {
   .home-declaracion-title { font-size: 1.5rem; }
   .como-funciona-hero h1 { font-size: 2.25rem; }
   .clubes-hero h1 { font-size: 2.25rem; }
+  .wishes-hero h1 { font-size: 2.25rem; }
 }
 
 /* Cómo funciona — hero */
@@ -371,6 +372,155 @@ section {
 .clubes-hero-hr {
   margin-top: 1.5rem;
   margin-bottom: 0;
+}
+
+/* Wishes — hero */
+.wishes-hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.wishes-hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  display: block;
+}
+
+.wishes-hero-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.wishes-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.wishes-hero-tagline {
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+}
+
+.wishes-hero-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 42ch;
+  line-height: 1.55;
+}
+
+.wishes-hero-hr {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.wishes-section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.wishes-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.wishes-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.wishes-section:has(.wishes-cards-summary) .wishes-cards {
+  margin-bottom: 1rem;
+}
+
+.wishes-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.wishes-card:hover {
+  border-color: var(--text-muted);
+  background: rgba(21, 28, 39, 0.85);
+}
+
+.wishes-card-icon {
+  flex-shrink: 0;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wishes-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.wishes-cards-summary {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.55;
+  max-width: 52ch;
+  margin: 0 !important;
+}
+
+.wishes-rule-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.wishes-cta-wrap {
+  padding-bottom: 2.5rem;
+}
+
+.wishes-cta-wrap h2 + p {
+  margin-bottom: 1rem;
+}
+
+.wishes-rule-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.wishes-rule-text {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .wishes-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
 }
 
 .clubes-section {
