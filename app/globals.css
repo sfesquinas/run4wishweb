@@ -234,6 +234,11 @@ hr {
   flex-direction: column;
   gap: 1.25rem;
   align-items: flex-start;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
 .empieza-step-img-wrap {
@@ -251,6 +256,74 @@ hr {
   height: 120px;
   object-fit: contain;
   margin: 0;
+}
+
+/* CTA bloque final */
+.empieza-cta-wrap { padding-bottom: 3rem; }
+
+.empieza-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.empieza-cta-left {
+  text-align: left;
+}
+
+.empieza-cta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.empieza-cta-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.empieza-cta-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 36ch;
+}
+
+.empieza-cta-btn {
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+}
+
+.empieza-cta-tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-muted);
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .empieza-cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .empieza-cta-left { flex: 1; }
+
+  .empieza-cta-right {
+    flex-shrink: 0;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {

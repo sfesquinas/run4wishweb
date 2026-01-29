@@ -77,7 +77,9 @@ export default function EmpiezaAhora() {
         <div className="empieza-step empieza-step--img-right">
           <div className="empieza-step-content">
             <h2><span className="empieza-step-num">02</span> Escribe tu deseo</h2>
-            <p>Quiero… Porque… Lo mediré así…</p>
+            <li>Siempre he querido viajar...</li>
+            <li>Me hace mucha ilusión tener un...</li>
+            <li>Llevar a mi hermana a ...</li>
           </div>
           <div className="empieza-step-img-wrap">
             <Image
@@ -136,20 +138,29 @@ export default function EmpiezaAhora() {
         </div>
       </section>
 
-      <section className="empieza-section">
-        <h2>¿Empezamos?</h2>
-        <a
-          href="https://run4wish.vercel.app/register"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary"
-          aria-label="Crear cuenta — Ir al registro"
-        >
-          Crear cuenta / Empezar
-        </a>
-        <p style={{ marginTop: "1rem", fontStyle: "italic" }}>
-          Si hoy empiezas, hoy ya ganaste.
-        </p>
+      <section className="empieza-section empieza-cta-wrap">
+        <div className="empieza-cta">
+          <div className="empieza-cta-left">
+            <h2 className="empieza-cta-title">¿Listo para empezar?</h2>
+            <p className="empieza-cta-text">
+              Crea tu cuenta gratis y pide tu primer deseo en menos de 2 minutos.
+            </p>
+          </div>
+          <div className="empieza-cta-right">
+            <a
+              href="https://run4wish.vercel.app/register"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary empieza-cta-btn"
+              aria-label="Crear cuenta — Ir al registro"
+            >
+              Crear cuenta gratis
+            </a>
+            <p className="empieza-cta-tagline">
+              Si hoy empiezas, hoy ya ganaste.
+            </p>
+          </div>
+        </div>
       </section>
     </>
   );
