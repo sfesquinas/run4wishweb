@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
 
@@ -83,21 +83,43 @@ export default function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <section style={{ paddingTop: "3rem" }}>
-        <h1>FAQ – Preguntas frecuentes</h1>
+      <section className="faq-hero" aria-labelledby="faq-heading">
+        <Image
+          src="/img/hero-faq.jpg"
+          alt="FAQ — Preguntas frecuentes Run4Wish"
+          width={1200}
+          height={630}
+          priority={true}
+          className="faq-hero-img"
+        />
+        <p className="faq-hero-label">FAQ</p>
+        <h1 id="faq-heading">Preguntas frecuentes</h1>
+        <p className="faq-hero-tagline">Respuestas rápidas a lo que más preguntas.</p>
+        <p className="faq-hero-text">
+          Wishes, clubes, retos, cómo empezar. Aquí las respuestas.
+        </p>
+        <hr className="faq-hero-hr" />
       </section>
 
-      {faq.map(({ q, a }) => (
-        <section key={q}>
-          <h3>{q}</h3>
-          <p>{a}</p>
-        </section>
-      ))}
+      <section className="faq-list-wrap" aria-label="Listado de preguntas">
+        {faq.map(({ q, a }) => (
+          <article key={q} className="faq-item">
+            <h3>{q}</h3>
+            <p>{a}</p>
+          </article>
+        ))}
+      </section>
 
-      <section>
-        <Link href="/empieza-ahora" className="btn-primary">
+      <section className="faq-cta-wrap">
+        <a
+          href="https://run4wish.vercel.app/register"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+          aria-label="Empieza ahora — Ir al registro"
+        >
           Empieza ahora
-        </Link>
+        </a>
       </section>
     </>
   );
