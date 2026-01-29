@@ -141,41 +141,51 @@ export default function Home() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "1.5rem",
-            marginBottom: "1.5rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "2rem",
+            marginBottom: "2rem",
           }}
         >
-          <Image
-            src="/img/app-1.jpg"
-            alt="Pantalla de pregunta diaria en Run4Wish"
-            width={400}
-            height={800}
-            style={{ width: "100%", height: "auto", borderRadius: 8 }}
-          />
-          <Image
-            src="/img/app-2.jpg"
-            alt="Pantalla de ranking y carrera en Run4Wish"
-            width={400}
-            height={800}
-            style={{ width: "100%", height: "auto", borderRadius: 8 }}
-          />
-          <Image
-            src="/img/app-3.jpg"
-            alt="Pantalla de wish y recompensas en Run4Wish"
-            width={400}
-            height={800}
-            style={{ width: "100%", height: "auto", borderRadius: 8 }}
-          />
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            <Image
+              src="/img/app-1.jpg"
+              alt="Pantalla login en Run4Wish"
+              width={300}
+              height={600}
+              sizes="(max-width: 768px) 80vw, (max-width: 1024px) 40vw, 300px"
+              style={{ width: "100%", height: "auto", borderRadius: 8 }}
+            />
+            <p style={{ margin: 0, textAlign: "center", color: "var(--text)", fontWeight: 500 }}>
+              Regístrate gratis
+            </p>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            <Image
+              src="/img/app-2.jpg"
+              alt="Pantalla de pregunta del dia en Run4Wish"
+              width={300}
+              height={600}
+              sizes="(max-width: 768px) 80vw, (max-width: 1024px) 40vw, 300px"
+              style={{ width: "100%", height: "auto", borderRadius: 8 }}
+            />
+            <p style={{ margin: 0, textAlign: "center", color: "var(--text)", fontWeight: 500 }}>
+              Responde 1 pregunta al día
+            </p>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            <Image
+              src="/img/app-3.jpg"
+              alt="Pantalla de trainig y premio en Run4Wish"
+              width={300}
+              height={600}
+              sizes="(max-width: 768px) 80vw, (max-width: 1024px) 40vw, 300px"
+              style={{ width: "100%", height: "auto", borderRadius: 8 }}
+            />
+            <p style={{ margin: 0, textAlign: "center", color: "var(--text)", fontWeight: 500 }}>
+              Entrena y participa en las carreras
+            </p>
+          </div>
         </div>
-        <ol style={{ marginLeft: "1.25rem", marginBottom: "1.5rem" }}>
-          <li style={{ marginBottom: "0.5rem" }}>Regístrate gratis.</li>
-          <li style={{ marginBottom: "0.5rem" }}>Responde 1 pregunta al día.</li>
-          <li style={{ marginBottom: "0.5rem" }}>
-            Entrena, únete a tu tribu, participa en carreras.
-          </li>
-          <li>Cumple tu wish.</li>
-        </ol>
         <Link href="/empieza-ahora" className="btn-primary">
           Empieza tu carrera
         </Link>
