@@ -1,23 +1,37 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
+const title = "Run4Wish | Convierte la constancia en deseos cumplidos";
+const description =
+  "Un reto diario de 20 segundos para entrenar constancia, unirte a tu tribu y avanzar en carreras con premios reales.";
+
 export const metadata: Metadata = {
-  title: "Run4Wish — Convierte la constancia en deseos cumplidos | R4W",
-  description:
-    "Reto diario de 1 pregunta. Gana quien no falla ningún día. Crea tu wish, únete a clubes, sigue retos. Empieza gratis.",
-  alternates: { canonical: "/" },
+  title,
+  description,
+  metadataBase: new URL("https://www.run4wish.com"),
+  alternates: { canonical: "https://www.run4wish.com/" },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Run4Wish — Convierte la constancia en deseos cumplidos | R4W",
-    description:
-      "Reto diario de 1 pregunta. Gana quien no falla ningún día. Crea tu wish, únete a clubes, sigue retos. Empieza gratis.",
-    images: ["/og-image.png"],
+    title,
+    description,
+    url: "https://www.run4wish.com/",
+    siteName: "Run4Wish",
+    type: "website",
+    images: [
+      {
+        url: "/og/run4wish.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Run4Wish — Convierte la constancia en deseos cumplidos",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Run4Wish — Convierte la constancia en deseos cumplidos | R4W",
-    description:
-      "Reto diario de 1 pregunta. Gana quien no falla ningún día. Crea tu wish, únete a clubes, sigue retos. Empieza gratis.",
-    images: ["/og-image.png"],
+    title,
+    description,
+    images: ["/og/run4wish.jpg"],
   },
 };
 
@@ -26,6 +40,14 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="home-section" style={{ paddingTop: "5rem", paddingBottom: "2.5rem" }}>
+        <Image
+          src="/img/hero-run4wish.jpg"
+          alt="Persona preparándose para correr: constancia diaria con Run4Wish"
+          width={1200}
+          height={630}
+          priority={true}
+          style={{ width: "100%", height: "auto", marginBottom: "2rem", borderRadius: 8 }}
+        />
         <h1>La vida es un reto diario. Run4Wish te entrena para ganarla.</h1>
         <p style={{ marginBottom: "1.5rem", maxWidth: "540px" }}>
           Da igual dónde naciste. Si tienes un deseo y eres constante, lo
@@ -116,6 +138,36 @@ export default function Home() {
       {/* Cómo empezar */}
       <section className="home-section">
         <h2>Cómo empezar</h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "1.5rem",
+            marginBottom: "1.5rem",
+          }}
+        >
+          <Image
+            src="/img/app-1.jpg"
+            alt="Pantalla de pregunta diaria en Run4Wish"
+            width={400}
+            height={800}
+            style={{ width: "100%", height: "auto", borderRadius: 8 }}
+          />
+          <Image
+            src="/img/app-2.jpg"
+            alt="Pantalla de ranking y carrera en Run4Wish"
+            width={400}
+            height={800}
+            style={{ width: "100%", height: "auto", borderRadius: 8 }}
+          />
+          <Image
+            src="/img/app-3.jpg"
+            alt="Pantalla de wish y recompensas en Run4Wish"
+            width={400}
+            height={800}
+            style={{ width: "100%", height: "auto", borderRadius: 8 }}
+          />
+        </div>
         <ol style={{ marginLeft: "1.25rem", marginBottom: "1.5rem" }}>
           <li style={{ marginBottom: "0.5rem" }}>Regístrate gratis.</li>
           <li style={{ marginBottom: "0.5rem" }}>Responde 1 pregunta al día.</li>

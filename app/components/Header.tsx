@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import NavDropdown from "./NavDropdown";
 
 const nav = [
@@ -27,12 +28,13 @@ export default function Header() {
       }}
     >
       <Link href="/" className="header-logo" aria-label="Run4Wish — Inicio">
-        <img
+        <Image
           src="/logo.svg"
           alt="Run4Wish"
           width={120}
           height={36}
           style={{ display: "block", height: 36, width: "auto" }}
+          priority={true}
         />
       </Link>
       <NavDropdown items={nav} />

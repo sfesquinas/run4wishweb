@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     title: "Wishes — Tu deseo con estructura | Run4Wish",
     description:
       "Crea wishes, prioriza, divide en mini-objetivos y mide progreso. Plantilla para tu primer wish.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wishes — Tu deseo con estructura | Run4Wish",
     description:
       "Crea wishes, prioriza, divide en mini-objetivos y mide progreso. Plantilla para tu primer wish.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
 };
 

@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     title: "Preguntas frecuentes — Run4Wish | R4W",
     description:
       "Qué es un wish, clubes, retos, cómo empezar. Respuestas rápidas a las dudas más comunes.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Preguntas frecuentes — Run4Wish | R4W",
     description:
       "Qué es un wish, clubes, retos, cómo empezar. Respuestas rápidas a las dudas más comunes.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
 };
 

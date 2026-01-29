@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -21,9 +22,9 @@ export default function Footer() {
         }}
       >
         <Link href="/" className="footer-logo" aria-label="Run4Wish — Inicio">
-          <img
+          <Image
             src="/logo.svg"
-            alt=""
+            alt="Run4Wish"
             width={100}
             height={30}
             style={{ display: "block", height: 30, width: "auto" }}

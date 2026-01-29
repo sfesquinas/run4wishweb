@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     title: "Clubes Run4Wish — Comunidades por objetivo | R4W",
     description:
       "Avanza acompañado: Finanzas, Idiomas, Creatividad, Emprender, Hábitos. Motivación, ideas y accountability.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Clubes Run4Wish — Comunidades por objetivo | R4W",
     description:
       "Avanza acompañado: Finanzas, Idiomas, Creatividad, Emprender, Hábitos. Motivación, ideas y accountability.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
 };
 

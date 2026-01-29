@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     title: "Run4Wish – R4W",
     description:
       "Plataforma donde conviertes deseos en objetivos claros: crea tu wish, únete a clubes, sigue retos, comparte avances.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Run4Wish – R4W",
     description:
       "Plataforma donde conviertes deseos en objetivos claros: crea tu wish, únete a clubes, sigue retos, comparte avances.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   icons: { icon: "/icon.png", apple: "/icon.png" },
   themeColor: "#0d1117",

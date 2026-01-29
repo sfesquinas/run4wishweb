@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     title: "Mi diario — Microtextos motivadores | Run4Wish",
     description:
       "Pequeños textos motivadores a diario. Inspiración y constancia para tu camino.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mi diario — Microtextos motivadores | Run4Wish",
     description:
       "Pequeños textos motivadores a diario. Inspiración y constancia para tu camino.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
 };
 

@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     title: "Empieza ahora — Tu primer wish en 2 minutos | Run4Wish",
     description:
       "Elige tipo de wish, escríbelo, únete a un club y arranca un reto 7/14/30 días. Crear cuenta gratis.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Empieza ahora — Tu primer wish en 2 minutos | Run4Wish",
     description:
       "Elige tipo de wish, escríbelo, únete a un club y arranca un reto 7/14/30 días. Crear cuenta gratis.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
 };
 

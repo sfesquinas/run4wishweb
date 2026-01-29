@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     title: "Cómo funciona Run4Wish — 5 pasos para cumplir tu wish | R4W",
     description:
       "Wish → mini-objetivos → Club → Retos → Revisar. Estructura, comunidad y constancia para lograr tus metas.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cómo funciona Run4Wish — 5 pasos para cumplir tu wish | R4W",
     description:
       "Wish → mini-objetivos → Club → Retos → Revisar. Estructura, comunidad y constancia para lograr tus metas.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
 };
 

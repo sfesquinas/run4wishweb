@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     title: "Carreras — Construye Run4Wish con nosotros | R4W",
     description:
       "Colabora en soporte, producto, marketing, contenido o comunidad. Ganas de construir y orientación a resultados.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Carreras — Construye Run4Wish con nosotros | R4W",
     description:
       "Colabora en soporte, producto, marketing, contenido o comunidad. Ganas de construir y orientación a resultados.",
-    images: ["/og-image.png"],
+    images: ["/og/run4wish.jpg"],
   },
 };
 
