@@ -272,6 +272,7 @@ section {
   .como-funciona-hero h1 { font-size: 2.25rem; }
   .clubes-hero h1 { font-size: 2.25rem; }
   .wishes-hero h1 { font-size: 2.25rem; }
+  .mi-diario-hero h1 { font-size: 2.25rem; }
 }
 
 /* Cómo funciona — hero */
@@ -420,6 +421,56 @@ section {
 }
 
 .wishes-hero-hr {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Mi diario — hero */
+.mi-diario-hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.mi-diario-hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  display: block;
+}
+
+.mi-diario-hero-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.mi-diario-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.mi-diario-hero-tagline {
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+}
+
+.mi-diario-hero-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 42ch;
+  line-height: 1.55;
+}
+
+.mi-diario-hero-hr {
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
