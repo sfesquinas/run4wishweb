@@ -5,7 +5,7 @@ import NavDropdown from "./NavDropdown";
 const nav = [
   { href: "/", label: "Inicio" },
   { href: "/como-funciona", label: "Cómo funciona" },
-  { href: "/carreras", label: "Carreras" },
+  //{ href: "/carreras", label: "Carreras" }, // oculto de momento
   { href: "/clubes", label: "Clubes" },
   { href: "/wishes", label: "Wishes" },
   { href: "/mi-diario", label: "Mi diario" },

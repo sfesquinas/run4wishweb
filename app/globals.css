@@ -165,6 +165,31 @@ hr {
   margin: 2rem 0;
 }
 
+.empieza-section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.empieza-section h1 { margin-bottom: 0.25rem; }
+.empieza-section h2 { margin-top: 0; margin-bottom: 0.5rem; }
+.empieza-section h2:first-of-type { margin-top: 0.5rem; }
+.empieza-section p { margin-bottom: 0.375rem; }
+.empieza-section hr { margin: 1.25rem 0; }
+.empieza-section ul { margin-bottom: 0.5rem; }
+
+.empieza-hero { padding-top: 2.5rem; }
+
+.empieza-section p + a:not(.btn-primary) { display: inline-block; margin-top: 0.5rem; }
+
+.empieza-step-img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr;
