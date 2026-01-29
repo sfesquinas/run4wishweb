@@ -40,33 +40,41 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="home-section" style={{ paddingTop: "5rem", paddingBottom: "2.5rem" }}>
+      <section className="home-section home-hero" aria-labelledby="home-heading">
         <Image
           src="/img/hero-run4wish.jpg"
           alt="Persona preparándose para correr: constancia diaria con Run4Wish"
           width={1200}
           height={630}
           priority={true}
-          style={{ width: "100%", height: "auto", marginBottom: "2rem", borderRadius: 8 }}
+          className="home-hero-img"
         />
-        <h1>La vida es un reto diario. Run4Wish te entrena para ganarla.</h1>
-        <p style={{ marginBottom: "1.5rem", maxWidth: "540px" }}>
-          Da igual dónde naciste. Si tienes un deseo y eres constante, lo
-          lograrás.
+        <p className="home-hero-label">Tu reto diario</p>
+        <h1 id="home-heading">
+          La vida es un reto diario. Run<span className="brand-4">4</span>Wish te entrena para ganarla.
+        </h1>
+        <p className="home-hero-tagline">
+          Da igual dónde naciste. Si tienes un deseo y eres constante, lo lograrás.
         </p>
-        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-          <Link href="/empieza-ahora" className="btn-primary">
+        <div className="home-hero-ctas">
+          <a
+            href="https://run4wish.vercel.app/register"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary home-hero-cta-primary"
+            aria-label="Crear cuenta — Ir al registro"
+          >
             Empieza ahora
-          </Link>
-          <Link href="/como-funciona" className="btn-primary">
+          </a>
+          <Link href="/como-funciona" className="btn-secondary home-hero-cta-secondary">
             Cómo funciona
           </Link>
         </div>
       </section>
 
-      {/* Así es R4W */}
+      {/* La vida que vives → R4W */}
       <section className="home-section">
-        <h2>Así es Run4Wish</h2>
+        <h2>La vida que vives, en Run<span className="brand-4">4</span>Wish</h2>
         <p style={{ marginBottom: "2rem" }}>
           La vida tiene retos, preparación, gente, aspiraciones y economía. R4W
           los traduce en sistema.
@@ -75,80 +83,28 @@ export default function Home() {
       </section>
 
       {/* Declaración */}
-      <section className="home-section">
-        <h2>Nuestra declaración</h2>
-        <p style={{ marginBottom: "1rem" }}>
-          R4W nace para demostrar que la condición socioeconómica no define tu
-          destino. Si tienes un deseo y lo persigues con constancia, lo puedes
-          lograr.
-        </p>
-        <p style={{ marginBottom: 0 }}>
-          Por eso creamos <strong>carreras especiales</strong>: cualquiera puede
-          enviarnos su deseo; lo valoramos y, si podemos hacerlo posible, lo
-          convertimos en el premio final de una carrera.
-        </p>
-        <p style={{ marginTop: "1rem" }}>
-          <Link href="/carreras">Ver carreras y cómo colaborar</Link>
-        </p>
-      </section>
-
-      {/* Cómo empezar */}
-      <section className="home-section">
-        <h2>Cómo empezar</h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "2rem",
-            marginBottom: "2rem",
-          }}
-        >
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            <Image
-              src="/img/app-1.jpg"
-              alt="Pantalla login en Run4Wish"
-              width={300}
-              height={600}
-              sizes="(max-width: 768px) 80vw, (max-width: 1024px) 40vw, 300px"
-              style={{ width: "100%", height: "auto", borderRadius: 8 }}
-            />
-            <p style={{ margin: 0, textAlign: "center", color: "var(--text)", fontWeight: 500 }}>
-              Regístrate gratis
-            </p>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            <Image
-              src="/img/app-2.jpg"
-              alt="Pantalla de pregunta del dia en Run4Wish"
-              width={300}
-              height={600}
-              sizes="(max-width: 768px) 80vw, (max-width: 1024px) 40vw, 300px"
-              style={{ width: "100%", height: "auto", borderRadius: 8 }}
-            />
-            <p style={{ margin: 0, textAlign: "center", color: "var(--text)", fontWeight: 500 }}>
-              Responde 1 pregunta al día
-            </p>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            <Image
-              src="/img/app-3.jpg"
-              alt="Pantalla de trainig y premio en Run4Wish"
-              width={300}
-              height={600}
-              sizes="(max-width: 768px) 80vw, (max-width: 1024px) 40vw, 300px"
-              style={{ width: "100%", height: "auto", borderRadius: 8 }}
-            />
-            <p style={{ margin: 0, textAlign: "center", color: "var(--text)", fontWeight: 500 }}>
-              Entrena y participa en las carreras
-            </p>
-          </div>
+      <section className="home-section home-declaracion" aria-labelledby="declaracion-heading">
+        <div className="home-declaracion-card">
+          <p className="home-declaracion-label">Por qué existimos</p>
+          <h2 id="declaracion-heading" className="home-declaracion-title">
+            Nuestra declaración
+          </h2>
+          <p className="home-declaracion-lead">
+            R<span className="brand-4">4</span>W nace para demostrar que la condición socioeconómica no define tu
+            destino. Si tienes un deseo y lo persigues con constancia, lo puedes
+            lograr.
+          </p>
+          <p className="home-declaracion-body">
+            Por eso creamos <strong>carreras especiales</strong>: cualquiera puede
+            enviarnos su deseo; lo valoramos y, si podemos hacerlo posible, lo
+            convertimos en el premio final de una carrera.
+          </p>
+          <p className="home-declaracion-cta">
+            <Link href="/empieza-ahora" className="home-declaracion-link">
+              Empieza ahora
+            </Link>
+          </p>
         </div>
-        <Link href="/empieza-ahora" className="btn-primary">
-          Empieza tu carrera
-        </Link>
-        <p style={{ marginTop: "1rem" }}>
-          <Link href="/como-funciona">Quiero saber más</Link>
-        </p>
       </section>
     </>
   );

@@ -121,6 +121,24 @@ button:focus-visible {
   background: var(--accent-hover);
 }
 
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card);
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
 /* Secciones */
 section {
   padding: 4rem 1.5rem;
@@ -131,6 +149,126 @@ section {
 .home-section {
   padding-top: 2.0rem;
   padding-bottom: 2rem;
+}
+
+/* Home hero */
+.home-hero {
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+}
+
+.home-hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  display: block;
+}
+
+.home-hero-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.home-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.home-hero-tagline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+  max-width: 36ch;
+  line-height: 1.5;
+}
+
+.home-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.home-hero-cta-primary {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+}
+
+.home-hero-cta-secondary {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.brand-4 {
+  color: var(--accent);
+}
+
+/* Declaración */
+.home-declaracion-card {
+  padding: 2rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.home-declaracion-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.home-declaracion-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.home-declaracion-lead {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text);
+  max-width: 52ch;
+}
+
+.home-declaracion-body {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 52ch;
+}
+
+.home-declaracion-cta {
+  margin: 1.25rem 0 0;
+}
+
+.home-declaracion-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.home-declaracion-link:hover {
+  color: var(--accent-hover);
+}
+
+@media (min-width: 640px) {
+  .home-hero h1 { font-size: 2.25rem; }
+  .home-declaracion-title { font-size: 1.5rem; }
 }
 
 h1 {
@@ -350,12 +488,63 @@ hr {
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.feature-card:hover {
+  border-color: var(--text-muted);
+  background: rgba(21, 28, 39, 0.85);
+}
+
+.feature-card-icon {
+  color: var(--accent);
+  width: fit-content;
+  margin-bottom: 0.25rem;
+}
+
+.feature-card-icon-img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.feature-card-title {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.feature-card-benefit {
+  margin: 0;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.feature-card-how {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 @media (min-width: 768px) {
   .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 
